@@ -1,0 +1,19 @@
+{
+  "name": "chart-report",
+  "version": "1.0.0",
+  "description": "Statistic Report page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://sridhar.snathan@git.mimos.local/gosg/chart-report.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-daterangepicker": "^2.1.25"
+  }
+}

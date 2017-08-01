@@ -1,0 +1,1479 @@
+<html lang="en"><head>
+    <title>Site administration | GOSG Admin</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="NONE,NOARCHIVE">
+    <!-- STYLESHEETS -->
+    
+        <link href="https://gosgstg.malaysia.gov.my/public/static/grappelli/jquery/ui/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="https://gosgstg.malaysia.gov.my/public/static/grappelli/stylesheets/screen.css" rel="stylesheet" type="text/css" media="all">
+        
+            <link href="https://gosgstg.malaysia.gov.my/public/static/grappelli/stylesheets/mueller/grid/output.css" rel="stylesheet" type="text/css" media="screen">
+        
+    
+    <!-- EXTRASTYLES -->
+    
+    <!-- JAVASCRIPTS -->
+    
+    
+        <script type="text/javascript">window.__admin_media_prefix__ = "https://gosgstg.malaysia.gov.my/public/static/grappelli/";</script>
+        <script type="text/javascript">window.__admin_utc_offset__ = "28800";</script>
+        <script type="text/javascript" charset="utf-8">
+            // GLOBALS
+            var grappelli = {},
+                ADMIN_URL = "/private/cms/admin",
+                MODEL_URL_ARRAY = {"1": {"pk": 1, "app": "admin", "model": "logentry"}, "2": {"pk": 2, "app": "auth", "model": "permission"}, "3": {"pk": 3, "app": "auth", "model": "user"}, "4": {"pk": 4, "app": "auth", "model": "group"}, "5": {"pk": 5, "app": "contenttypes", "model": "contenttype"}, "6": {"pk": 6, "app": "sessions", "model": "session"}, "7": {"pk": 7, "app": "article", "model": "article"}, "8": {"pk": 8, "app": "business", "model": "agency"}, "9": {"pk": 9, "app": "business", "model": "agencyapplication"}, "10": {"pk": 10, "app": "business", "model": "agencyapplicationform"}, "11": {"pk": 11, "app": "business", "model": "agencyservice"}, "12": {"pk": 12, "app": "business", "model": "agencyservicestatus"}, "13": {"pk": 13, "app": "business", "model": "agencyservicetype"}, "14": {"pk": 14, "app": "business", "model": "applicationsubmission"}, "15": {"pk": 15, "app": "business", "model": "client"}, "16": {"pk": 16, "app": "business", "model": "ministry"}, "17": {"pk": 17, "app": "business", "model": "transaction"}, "18": {"pk": 18, "app": "business", "model": "transactionstatus"}, "19": {"pk": 19, "app": "business", "model": "transactiontype"}, "20": {"pk": 20, "app": "fobi", "model": "formfieldsetentry"}, "21": {"pk": 21, "app": "fobi", "model": "formhandler"}, "22": {"pk": 22, "app": "fobi", "model": "formhandlerentry"}, "23": {"pk": 23, "app": "fobi", "model": "formwizardhandler"}, "24": {"pk": 24, "app": "fobi", "model": "formwizardentry"}, "25": {"pk": 25, "app": "fobi", "model": "formwizardformentry"}, "26": {"pk": 26, "app": "fobi", "model": "formwizardhandlerentry"}, "27": {"pk": 27, "app": "fobi", "model": "formelement"}, "28": {"pk": 28, "app": "fobi", "model": "formelemententry"}, "29": {"pk": 29, "app": "fobi", "model": "formentry"}, "30": {"pk": 30, "app": "easy_thumbnails", "model": "thumbnail"}, "31": {"pk": 31, "app": "easy_thumbnails", "model": "source"}, "32": {"pk": 32, "app": "easy_thumbnails", "model": "thumbnaildimensions"}, "33": {"pk": 33, "app": "landing", "model": "landing"}, "34": {"pk": 34, "app": "landing", "model": "landingobject"}, "35": {"pk": 35, "app": "article", "model": "articlecategory"}, "36": {"pk": 36, "app": "sites", "model": "site"}, "37": {"pk": 37, "app": "fobi_contrib_plugins_form_handlers_db_store", "model": "savedformwizarddataentry"}, "38": {"pk": 38, "app": "fobi_contrib_plugins_form_handlers_db_store", "model": "savedformdataentry"}, "39": {"pk": 39, "app": "business", "model": "company"}, "40": {"pk": 40, "app": "article", "model": "articlerevision"}, "41": {"pk": 41, "app": "article", "model": "articlestepsgroup"}, "42": {"pk": 42, "app": "article", "model": "articletopic"}, "43": {"pk": 43, "app": "article", "model": "articletype"}, "44": {"pk": 44, "app": "article", "model": "articlesteps"}, "45": {"pk": 45, "app": "article", "model": "articlecategorytopic"}, "46": {"pk": 46, "app": "article", "model": "articletargetmap"}, "47": {"pk": 47, "app": "article", "model": "articletarget"}, "48": {"pk": 48, "app": "intro", "model": "intro"}, "49": {"pk": 49, "app": "polls", "model": "polls"}, "50": {"pk": 50, "app": "feedback", "model": "feedback"}, "51": {"pk": 51, "app": "slides", "model": "slides"}, "52": {"pk": 52, "app": "announcement", "model": "announcementcategory"}, "53": {"pk": 53, "app": "announcement", "model": "announcement"}, "54": {"pk": 54, "app": "feedback", "model": "feedbacksent"}, "55": {"pk": 55, "app": "polls", "model": "pollsquestion"}, "56": {"pk": 56, "app": "counter", "model": "countervisit"}, "57": {"pk": 57, "app": "counter", "model": "counterarticletopic"}, "58": {"pk": 58, "app": "counter", "model": "counterarticle"}, "59": {"pk": 59, "app": "counter", "model": "counterkeyword"}, "60": {"pk": 60, "app": "epenyertaan", "model": "epenyertaan"}, "61": {"pk": 61, "app": "archive", "model": "archivearticle"}, "62": {"pk": 62, "app": "inbox", "model": "inbox"}, "63": {"pk": 63, "app": "epenyertaan", "model": "epenyertaan_agencies"}, "64": {"pk": 64, "app": "archive", "model": "archivefeedback"}, "65": {"pk": 65, "app": "archive", "model": "archiveannouncement"}, "66": {"pk": 66, "app": "publication", "model": "publicationcategory"}, "67": {"pk": 67, "app": "publication", "model": "publication"}, "68": {"pk": 68, "app": "photologue", "model": "gallery"}, "69": {"pk": 69, "app": "photologue", "model": "watermark"}, "70": {"pk": 70, "app": "photologue", "model": "photo"}, "71": {"pk": 71, "app": "photologue", "model": "photosize"}, "72": {"pk": 72, "app": "photologue", "model": "photoeffect"}, "73": {"pk": 73, "app": "counter", "model": "counteronline"}, "74": {"pk": 74, "app": "onlineservice", "model": "osresource"}, "75": {"pk": 75, "app": "onlineservice", "model": "osministry"}, "76": {"pk": 76, "app": "onlineservice", "model": "osagency"}, "77": {"pk": 77, "app": "mycalendar", "model": "mycalendar"}, "78": {"pk": 78, "app": "gallery", "model": "audio"}, "79": {"pk": 79, "app": "gallery", "model": "video"}, "80": {"pk": 80, "app": "epenyertaan", "model": "epenyertaan_policy"}, "81": {"pk": 81, "app": "onlineservice", "model": "oslocation"}, "82": {"pk": 82, "app": "gosg_sitemaps", "model": "gosgsitemap"}, "83": {"pk": 83, "app": "business", "model": "myidentityreplylog"}, "84": {"pk": 84, "app": "business", "model": "myidentityrequestlog"}, "85": {"pk": 85, "app": "article", "model": "historicalarticle"}, "86": {"pk": 86, "app": "publication", "model": "publicationagency"}, "87": {"pk": 87, "app": "counter", "model": "counteronlineservice"}, "88": {"pk": 88, "app": "archive", "model": "archivepublication"}, "89": {"pk": 89, "app": "archive", "model": "archiveepenyertaan"}, "90": {"pk": 90, "app": "subscription", "model": "subscription_outbox"}, "91": {"pk": 91, "app": "subscription", "model": "subscription_sent"}, "92": {"pk": 92, "app": "subscription", "model": "subscription_user"}, "93": {"pk": 93, "app": "subscription", "model": "subscription"}, "94": {"pk": 94, "app": "subscription", "model": "subscription_broadcast_list"}, "95": {"pk": 95, "app": "article", "model": "articleonlineservicetopic"}, "96": {"pk": 96, "app": "subscription", "model": "subscription_captcha"}, "97": {"pk": 97, "app": "rss", "model": "rss"}, "98": {"pk": 98, "app": "archive", "model": "archivemenudescription"}, "99": {"pk": 99, "app": "request", "model": "request"}, "100": {"pk": 100, "app": "survey", "model": "survey"}, "101": {"pk": 101, "app": "survey", "model": "category"}, "102": {"pk": 102, "app": "survey", "model": "question"}, "103": {"pk": 103, "app": "survey", "model": "response"}, "104": {"pk": 104, "app": "survey", "model": "answerbase"}, "105": {"pk": 105, "app": "survey", "model": "answertext"}, "106": {"pk": 106, "app": "survey", "model": "answerradio"}, "107": {"pk": 107, "app": "survey", "model": "answerselect"}, "108": {"pk": 108, "app": "survey", "model": "answerselectmultiple"}, "109": {"pk": 109, "app": "survey", "model": "answerinteger"}, "110": {"pk": 110, "app": "footer", "model": "footerlinks"}, "111": {"pk": 111, "app": "footer", "model": "footerbottom"}, "112": {"pk": 112, "app": "footer", "model": "footervisit"}, "113": {"pk": 113, "app": "footer", "model": "footerext"}, "114": {"pk": 114, "app": "footer", "model": "footermiddle"}, "115": {"pk": 115, "app": "footer", "model": "footer"}, "116": {"pk": 116, "app": "client_charter", "model": "clientchartertitle"}, "117": {"pk": 117, "app": "client_charter", "model": "clientcharter"}, "118": {"pk": 118, "app": "tracking", "model": "pageview"}, "119": {"pk": 119, "app": "tracking", "model": "visitor"}, "120": {"pk": 120, "app": "footer", "model": "footersocial"}, "121": {"pk": 121, "app": "gosg_token", "model": "gosgtoken"}, "122": {"pk": 122, "app": "counter", "model": "countervisitgoogleanalytic"}, "123": {"pk": 123, "app": "upload_file", "model": "uploadfile"}, "124": {"pk": 124, "app": "feedback", "model": "feedbacksubject"}, "125": {"pk": 125, "app": "feedback", "model": "feedbacktype"}, "126": {"pk": 126, "app": "FAQ", "model": "faq"}, "127": {"pk": 127, "app": "settings", "model": "state"}, "128": {"pk": 128, "app": "settings", "model": "country"}, "129": {"pk": 129, "app": "settings", "model": "city"}, "130": {"pk": 130, "app": "header", "model": "header"}, "131": {"pk": 131, "app": "inbox", "model": "inboxsent"}, "132": {"pk": 132, "app": "intro", "model": "lifeevent"}, "133": {"pk": 133, "app": "intro", "model": "highlight"}, "134": {"pk": 134, "app": "gallery", "model": "image"}},
+                DATE_FORMAT = "%Y-%m-%d",
+                TIME_FORMAT = "%H:%M:%S",
+                DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S";
+        </script>
+        <!-- jQuery, jQuery-UI -->
+        <script src="https://gosgstg.malaysia.gov.my/public/static/grappelli/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="https://gosgstg.malaysia.gov.my/public/static/grappelli/jquery/ui/jquery-ui.min.js" type="text/javascript"></script>
+        
+            <!-- Grappelli Minified -->
+            <script src="https://gosgstg.malaysia.gov.my/public/static/grappelli/js/grappelli.min.js" type="text/javascript"></script>
+        
+        <script type="text/javascript" charset="utf-8">
+            (function($) {
+                $(document).ready(function() {
+                    $("#grp-navigation .grp-collapse").grp_collapsible();
+                });
+            })(grp.jQuery);
+        </script>
+    
+
+    <!-- EXTRAHEAD -->
+    
+</head>
+<body class="dashboard">
+    <div id="container" class="grp-container">
+
+        
+            <!-- HEADER -->
+            <header id="grp-header" class="">
+                
+
+                    
+                        <!-- NAVIGATION -->
+                        <div id="grp-navigation">
+                            
+    
+    
+
+                            <h1 id="grp-admin-title">GOSG Admin</h1>
+                            
+                                
+                                    <ul id="grp-user-tools">
+                                        <!-- Userlinks -->
+                                        
+                                            <!-- Username -->
+                                            <li class="grp-user-options-container grp-collapse grp-closed ">
+                                                <a href="javascript://" class="user-options-handler grp-collapse-handler grp-switch-user-is-original">hantu@yopmail.com</a>
+                                                <ul class="grp-user-options">
+                                                    <!-- Change Password -->
+                                                    
+                                                        <li><a href="/private/cms/adminpassword_change/" class="grp-change-password">Change password</a></li>
+                                                    
+                                                    <!-- Logout -->
+                                                    <li><a href="/private/cms/adminlogout/" class="grp-logout">Log out</a></li>
+                                                    <!-- Switch -->
+                                                    
+                                                </ul>
+                                            </li>
+                                            <!-- Site URL -->
+                                            
+                                                <li><a href="/private/cms/">View site</a></li>
+                                            
+                                            <!-- Documentation -->
+                                            
+                                            
+                                        
+                                    </ul>
+                                
+                            
+                            <!-- Nav-Global -->
+                            
+                        </div>
+                    
+
+                    
+                        <!-- CONTEXT NAVIGATION -->
+                        <div id="grp-context-navigation">
+                            <nav id="grp-breadcrumbs" class="">
+                                <header style="display:none"><h1>Breadcrumbs</h1></header>
+                                
+    <ul class="grp-horizontal-list">
+        <li>Home</li>
+    </ul>
+
+                            </nav>
+                            <nav id="grp-page-tools">
+                                <header style="display:none"><h1>Page Tools</h1></header>
+                                
+                            </nav>
+                        </div>
+                    
+
+                
+            </header>
+        
+
+        <!-- CONTENT -->
+        <article id="grp-content" class="content-grid">
+
+            <!-- MESSAGES -->
+            
+                
+            
+
+            <!-- CONTENT TITLE -->
+            <header id="grp-content-title">
+                
+                
+    
+        <header><h1>Site administration</h1></header>
+    
+
+                
+            </header>
+
+            <!-- CONTENT-CONTAINER -->
+            <div id="grp-content-container">
+                
+    <div class="g-d-c">
+        <div class="g-d-12 g-d-f">
+            
+                <div class="grp-module" id="app_article">
+                    <h2><a href="/private/cms/adminarticle/" class="grp-section">Article</a></h2>
+                    
+                        <div class="grp-row" id="model-article">
+                            
+                                <a href="/private/cms/adminarticle/article/"><strong>Articles</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminarticle/article/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-articletopic">
+                            
+                                <a href="/private/cms/adminarticle/articletopic/"><strong>Article Topics</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminarticle/articletopic/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-articlecategory">
+                            
+                                <a href="/private/cms/adminarticle/articlecategory/"><strong>Article Categories</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminarticle/articlecategory/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-articlecategorytopic">
+                            
+                                <a href="/private/cms/adminarticle/articlecategorytopic/"><strong>Article Category Topics</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminarticle/articlecategorytopic/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-articleonlineservicetopic">
+                            
+                                <a href="/private/cms/adminarticle/articleonlineservicetopic/"><strong>Article Onlineservice Topics</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminarticle/articleonlineservicetopic/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_authentication and authorization">
+                    <h2><a href="/private/cms/adminauth/" class="grp-section">Authentication and Authorization</a></h2>
+                    
+                        <div class="grp-row" id="model-group">
+                            
+                                <a href="/private/cms/adminauth/group/"><strong>Groups</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminauth/group/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-user">
+                            
+                                <a href="/private/cms/adminauth/user/"><strong>Users</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminauth/user/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_feedback form">
+                    <h2><a href="/private/cms/adminfeedback/" class="grp-section">Feedback Form</a></h2>
+                    
+                        <div class="grp-row" id="model-feedback">
+                            
+                                <a href="/private/cms/adminfeedback/feedback/"><strong>Sent By Visitors</strong></a>
+                            
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-feedbacksent">
+                            
+                                <a href="/private/cms/adminfeedback/feedbacksent/"><strong>Sent By Admin</strong></a>
+                            
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-feedbacktype">
+                            
+                                <a href="/private/cms/adminfeedback/feedbacktype/"><strong>Option Feedback Type</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminfeedback/feedbacktype/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-feedbacksubject">
+                            
+                                <a href="/private/cms/adminfeedback/feedbacksubject/"><strong>Option Feedback Subject</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminfeedback/feedbacksubject/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_polls">
+                    <h2><a href="/private/cms/adminpolls/" class="grp-section">Polls</a></h2>
+                    
+                        <div class="grp-row" id="model-pollsquestion">
+                            
+                                <a href="/private/cms/adminpolls/pollsquestion/"><strong>Polls Questions</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminpolls/pollsquestion/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-polls">
+                            
+                                <a href="/private/cms/adminpolls/polls/"><strong>Polls Results</strong></a>
+                            
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_slides">
+                    <h2><a href="/private/cms/adminslides/" class="grp-section">Slides</a></h2>
+                    
+                        <div class="grp-row" id="model-slides">
+                            
+                                <a href="/private/cms/adminslides/slides/"><strong>Slides</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminslides/slides/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_home">
+                    <h2><a href="/private/cms/adminintro/" class="grp-section">Home</a></h2>
+                    
+                        <div class="grp-row" id="model-lifeevent">
+                            
+                                <a href="/private/cms/adminintro/lifeevent/"><strong>Life Event</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminintro/lifeevent/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-highlight">
+                            
+                                <a href="/private/cms/adminintro/highlight/"><strong>Highlight</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminintro/highlight/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-intro">
+                            
+                                <a href="/private/cms/adminintro/intro/"><strong>Text and Description</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminintro/intro/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_inbox">
+                    <h2><a href="/private/cms/admininbox/" class="grp-section">Inbox</a></h2>
+                    
+                        <div class="grp-row" id="model-inbox">
+                            
+                                <a href="/private/cms/admininbox/inbox/"><strong>Inbox</strong></a>
+                            
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-inboxsent">
+                            
+                                <a href="/private/cms/admininbox/inboxsent/"><strong>Sent</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/admininbox/inboxsent/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_header">
+                    <h2><a href="/private/cms/adminheader/" class="grp-section">Header</a></h2>
+                    
+                        <div class="grp-row" id="model-header">
+                            
+                                <a href="/private/cms/adminheader/header/"><strong>Header</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminheader/header/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_footer">
+                    <h2><a href="/private/cms/adminfooter/" class="grp-section">Footer</a></h2>
+                    
+                        <div class="grp-row" id="model-footerbottom">
+                            
+                                <a href="/private/cms/adminfooter/footerbottom/"><strong>FooterBottom</strong></a>
+                            
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-footerext">
+                            
+                                <a href="/private/cms/adminfooter/footerext/"><strong>FooterExt</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminfooter/footerext/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-footerlinks">
+                            
+                                <a href="/private/cms/adminfooter/footerlinks/"><strong>FooterLinks</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminfooter/footerlinks/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-footermiddle">
+                            
+                                <a href="/private/cms/adminfooter/footermiddle/"><strong>FooterMiddle</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminfooter/footermiddle/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-footersocial">
+                            
+                                <a href="/private/cms/adminfooter/footersocial/"><strong>FooterSocial</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminfooter/footersocial/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-footervisit">
+                            
+                                <a href="/private/cms/adminfooter/footervisit/"><strong>FooterVisit</strong></a>
+                            
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-footer">
+                            
+                                <a href="/private/cms/adminfooter/footer/"><strong>Footers</strong></a>
+                            
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_frequent ask questions">
+                    <h2><a href="/private/cms/adminFAQ/" class="grp-section">Frequent Ask Questions</a></h2>
+                    
+                        <div class="grp-row" id="model-faq">
+                            
+                                <a href="/private/cms/adminFAQ/faq/"><strong>FAQs</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminFAQ/faq/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_photo galleries">
+                    <h2><a href="/private/cms/adminphotologue/" class="grp-section">Photo Galleries</a></h2>
+                    
+                        <div class="grp-row" id="model-gallery">
+                            
+                                <a href="/private/cms/adminphotologue/gallery/"><strong>Galleries</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminphotologue/gallery/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-photo">
+                            
+                                <a href="/private/cms/adminphotologue/photo/"><strong>Photos</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminphotologue/photo/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_video and audio galleries">
+                    <h2><a href="/private/cms/admingallery/" class="grp-section">Video and Audio Galleries</a></h2>
+                    
+                        <div class="grp-row" id="model-audio">
+                            
+                                <a href="/private/cms/admingallery/audio/"><strong>Audio</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/admingallery/audio/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-image">
+                            
+                                <a href="/private/cms/admingallery/image/"><strong>Image</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/admingallery/image/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-video">
+                            
+                                <a href="/private/cms/admingallery/video/"><strong>Video</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/admingallery/video/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_upload file">
+                    <h2><a href="/private/cms/adminupload_file/" class="grp-section">Upload File</a></h2>
+                    
+                        <div class="grp-row" id="model-uploadfile">
+                            
+                                <a href="/private/cms/adminupload_file/uploadfile/"><strong>Upload Files</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminupload_file/uploadfile/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_announcement">
+                    <h2><a href="/private/cms/adminannouncement/" class="grp-section">Announcement</a></h2>
+                    
+                        <div class="grp-row" id="model-announcement">
+                            
+                                <a href="/private/cms/adminannouncement/announcement/"><strong>Announcements</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminannouncement/announcement/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-announcementcategory">
+                            
+                                <a href="/private/cms/adminannouncement/announcementcategory/"><strong>Announcement Categories</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminannouncement/announcementcategory/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_my calendar">
+                    <h2><a href="/private/cms/adminmycalendar/" class="grp-section">My Calendar</a></h2>
+                    
+                        <div class="grp-row" id="model-mycalendar">
+                            
+                                <a href="/private/cms/adminmycalendar/mycalendar/"><strong>My Calendar</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminmycalendar/mycalendar/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_counter">
+                    <h2><a href="/private/cms/admincounter/" class="grp-section">Counter</a></h2>
+                    
+                        <div class="grp-row" id="model-countervisitgoogleanalytic">
+                            
+                                <a href="/private/cms/admincounter/countervisitgoogleanalytic/"><strong>Counter Visits</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/admincounter/countervisitgoogleanalytic/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-counterarticle">
+                            
+                                <a href="/private/cms/admincounter/counterarticle/"><strong>Counter Article</strong></a>
+                            
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-counterarticletopic">
+                            
+                                <a href="/private/cms/admincounter/counterarticletopic/"><strong>Counter Article Topic</strong></a>
+                            
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-counteronlineservice">
+                            
+                                <a href="/private/cms/admincounter/counteronlineservice/"><strong>Counter Online Service</strong></a>
+                            
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_counter requests">
+                    <h2><a href="/private/cms/adminrequest/" class="grp-section">Counter Requests</a></h2>
+                    
+                        <div class="grp-row" id="model-request">
+                            
+                                <a href="/private/cms/adminrequest/request/"><strong>Requests</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminrequest/request/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_visitor tracking">
+                    <h2><a href="/private/cms/admintracking/" class="grp-section">Visitor Tracking</a></h2>
+                    
+                        <div class="grp-row" id="model-pageview">
+                            
+                                <a href="/private/cms/admintracking/pageview/"><strong>Pageviews</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/admintracking/pageview/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-visitor">
+                            
+                                <a href="/private/cms/admintracking/visitor/"><strong>Visitors</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/admintracking/visitor/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_subscription">
+                    <h2><a href="/private/cms/adminsubscription/" class="grp-section">Subscription</a></h2>
+                    
+                        <div class="grp-row" id="model-subscription">
+                            
+                                <a href="/private/cms/adminsubscription/subscription/"><strong>Subscription</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminsubscription/subscription/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-subscription_user">
+                            
+                                <a href="/private/cms/adminsubscription/subscription_user/"><strong>Subscription User</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminsubscription/subscription_user/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-subscription_broadcast_list">
+                            
+                                <a href="/private/cms/adminsubscription/subscription_broadcast_list/"><strong>Subscription Broadcast List</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminsubscription/subscription_broadcast_list/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-subscription_outbox">
+                            
+                                <a href="/private/cms/adminsubscription/subscription_outbox/"><strong>Subscription Outbox</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminsubscription/subscription_outbox/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-subscription_sent">
+                            
+                                <a href="/private/cms/adminsubscription/subscription_sent/"><strong>Subscription Sent</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminsubscription/subscription_sent/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_epenyertaan">
+                    <h2><a href="/private/cms/adminepenyertaan/" class="grp-section">Epenyertaan</a></h2>
+                    
+                        <div class="grp-row" id="model-epenyertaan">
+                            
+                                <a href="/private/cms/adminepenyertaan/epenyertaan/"><strong>Epenyertaan</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminepenyertaan/epenyertaan/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-epenyertaan_policy">
+                            
+                                <a href="/private/cms/adminepenyertaan/epenyertaan_policy/"><strong>Epenyertaan Policy</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminepenyertaan/epenyertaan_policy/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-epenyertaan_agencies">
+                            
+                                <a href="/private/cms/adminepenyertaan/epenyertaan_agencies/"><strong>Epenyertaan Agencies</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminepenyertaan/epenyertaan_agencies/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_publication">
+                    <h2><a href="/private/cms/adminpublication/" class="grp-section">Publication</a></h2>
+                    
+                        <div class="grp-row" id="model-publicationcategory">
+                            
+                                <a href="/private/cms/adminpublication/publicationcategory/"><strong>Publication Categories</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminpublication/publicationcategory/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-publication">
+                            
+                                <a href="/private/cms/adminpublication/publication/"><strong>Publications</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminpublication/publication/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_survey form">
+                    <h2><a href="/private/cms/adminsurvey/" class="grp-section">Survey Form</a></h2>
+                    
+                        <div class="grp-row" id="model-response">
+                            
+                                <a href="/private/cms/adminsurvey/response/"><strong>Responses</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminsurvey/response/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-survey">
+                            
+                                <a href="/private/cms/adminsurvey/survey/"><strong>Surveys</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminsurvey/survey/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_business">
+                    <h2><a href="/private/cms/adminbusiness/" class="grp-section">Business</a></h2>
+                    
+                        <div class="grp-row" id="model-agency">
+                            
+                                <a href="/private/cms/adminbusiness/agency/"><strong>Agencies</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminbusiness/agency/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-agencyapplicationform">
+                            
+                                <a href="/private/cms/adminbusiness/agencyapplicationform/"><strong>Agency application forms</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminbusiness/agencyapplicationform/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-agencyapplication">
+                            
+                                <a href="/private/cms/adminbusiness/agencyapplication/"><strong>Agency applications</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminbusiness/agencyapplication/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-agencyservicestatus">
+                            
+                                <a href="/private/cms/adminbusiness/agencyservicestatus/"><strong>Agency service status</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminbusiness/agencyservicestatus/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-agencyservicetype">
+                            
+                                <a href="/private/cms/adminbusiness/agencyservicetype/"><strong>Agency service types</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminbusiness/agencyservicetype/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-agencyservice">
+                            
+                                <a href="/private/cms/adminbusiness/agencyservice/"><strong>Agency services</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminbusiness/agencyservice/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-applicationsubmission">
+                            
+                                <a href="/private/cms/adminbusiness/applicationsubmission/"><strong>Application submissions</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminbusiness/applicationsubmission/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-client">
+                            
+                                <a href="/private/cms/adminbusiness/client/"><strong>Clients</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminbusiness/client/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-ministry">
+                            
+                                <a href="/private/cms/adminbusiness/ministry/"><strong>Ministries</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminbusiness/ministry/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-transactionstatus">
+                            
+                                <a href="/private/cms/adminbusiness/transactionstatus/"><strong>Transaction status</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminbusiness/transactionstatus/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-transactiontype">
+                            
+                                <a href="/private/cms/adminbusiness/transactiontype/"><strong>Transaction types</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminbusiness/transactiontype/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-transaction">
+                            
+                                <a href="/private/cms/adminbusiness/transaction/"><strong>Transactions</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminbusiness/transaction/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_archive">
+                    <h2><a href="/private/cms/adminarchive/" class="grp-section">Archive</a></h2>
+                    
+                        <div class="grp-row" id="model-archivearticle">
+                            
+                                <a href="/private/cms/adminarchive/archivearticle/"><strong>Archive Articles</strong></a>
+                            
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-archivefeedback">
+                            
+                                <a href="/private/cms/adminarchive/archivefeedback/"><strong>Archive Feedbacks</strong></a>
+                            
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-archiveannouncement">
+                            
+                                <a href="/private/cms/adminarchive/archiveannouncement/"><strong>Archive Announcement</strong></a>
+                            
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-archivepublication">
+                            
+                                <a href="/private/cms/adminarchive/archivepublication/"><strong>Archive Publications</strong></a>
+                            
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-archiveepenyertaan">
+                            
+                                <a href="/private/cms/adminarchive/archiveepenyertaan/"><strong>Archive Epenyertaan</strong></a>
+                            
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-archivemenudescription">
+                            
+                                <a href="/private/cms/adminarchive/archivemenudescription/"><strong>Menu and Description for Archive</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminarchive/archivemenudescription/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_rss">
+                    <h2><a href="/private/cms/adminrss/" class="grp-section">RSS</a></h2>
+                    
+                        <div class="grp-row" id="model-rss">
+                            
+                                <a href="/private/cms/adminrss/rss/"><strong>Menu and Description for RSS</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminrss/rss/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_online service">
+                    <h2><a href="/private/cms/adminonlineservice/" class="grp-section">Online Service</a></h2>
+                    
+                        <div class="grp-row" id="model-osagency">
+                            
+                                <a href="/private/cms/adminonlineservice/osagency/"><strong>Agencies</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminonlineservice/osagency/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-osministry">
+                            
+                                <a href="/private/cms/adminonlineservice/osministry/"><strong>Ministries</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminonlineservice/osministry/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-oslocation">
+                            
+                                <a href="/private/cms/adminonlineservice/oslocation/"><strong>Online Service Locations</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminonlineservice/oslocation/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_client charter">
+                    <h2><a href="/private/cms/adminclient_charter/" class="grp-section">Client Charter</a></h2>
+                    
+                        <div class="grp-row" id="model-clientcharter">
+                            
+                                <a href="/private/cms/adminclient_charter/clientcharter/"><strong>Client Charter</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminclient_charter/clientcharter/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-clientchartertitle">
+                            
+                                <a href="/private/cms/adminclient_charter/clientchartertitle/"><strong>Client Charter Title</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminclient_charter/clientchartertitle/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_settings">
+                    <h2><a href="/private/cms/adminsettings/" class="grp-section">Settings</a></h2>
+                    
+                        <div class="grp-row" id="model-country">
+                            
+                                <a href="/private/cms/adminsettings/country/"><strong>Country</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminsettings/country/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-state">
+                            
+                                <a href="/private/cms/adminsettings/state/"><strong>State</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminsettings/state/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                        <div class="grp-row" id="model-city">
+                            
+                                <a href="/private/cms/adminsettings/city/"><strong>City</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/adminsettings/city/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_gosg token">
+                    <h2><a href="/private/cms/admingosg_token/" class="grp-section">GOSG Token</a></h2>
+                    
+                        <div class="grp-row" id="model-gosgtoken">
+                            
+                                <a href="/private/cms/admingosg_token/gosgtoken/"><strong>GOSG Token</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/admingosg_token/gosgtoken/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div class="grp-module" id="app_gosg sitemaps">
+                    <h2><a href="/private/cms/admingosg_sitemaps/" class="grp-section">GOSG Sitemaps</a></h2>
+                    
+                        <div class="grp-row" id="model-gosgsitemap">
+                            
+                                <a href="/private/cms/admingosg_sitemaps/gosgsitemap/"><strong>Gosg Sitemaps</strong></a>
+                            
+                            
+                                <ul class="grp-actions">
+                                    
+                                        <li class="grp-icon grp-add-link">
+                                            <a href="/private/cms/admingosg_sitemaps/gosgsitemap/add/" title="Add">&nbsp;</a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </div>
+                    
+                </div>
+            
+            
+                
+            
+        </div>
+        <div class="g-d-6 g-d-l">
+            <div class="grp-module" id="grp-recent-actions-module">
+                <h2>Recent Actions</h2>
+                <div class="grp-module">
+                    <h3>My Actions</h3>
+                    
+                    
+                        <div class="grp-row"><p>None available</p></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+            </div>
+
+        </article>
+
+        <!-- FOOTER -->
+        
+
+    </div>
+
+
+</body></html>
